@@ -1,26 +1,102 @@
 :root {
 	--text-color1: rgb(224, 224, 224);
+	--text-color2: rgb(153, 206, 146);
+	--background-color1: rgb(248, 248, 248);
+	font-family: "Montserrat", sans-serif;
 }
 
-/*Main Container*/
+/*Global*/
 
 .main-container {
 	display: flex;
 	width: 100vw;
 	height: 100vh;
+	background-color: var(--background-color1);
+}
+a:link {
+	color: var(--text-color1);
+	text-decoration: none;
+}
+a:visited {
+	color: var(--text-color2);
+	text-decoration: none;
 }
 
 /*Hero Image Container*/
 
 .hero-image {
 	background-image: url(./images/hero-photo.jpg);
-	width: 400px;
+	width: 40%;
 	height: 100vh;
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.title-container {
+	background-color: rgba(0, 0, 0, 0.452);
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10rem;
 }
 
 .title {
 	color: var(--text-color1);
 	text-align: center;
-	margin-top: 10rem;
+
+	font-weight: 400;
+	letter-spacing: 7px;
+	font-size: 2rem;
+}
+
+.title span {
+	font-weight: 900;
+}
+
+.footer {
+	color: var(--text-color1);
+	text-align: center;
+	font-weight: 300;
+}
+
+/*Form*/
+.form {
+	margin-left: 3rem;
+	height: 500px;
+	margin: auto;
+}
+.form p {
+	text-align: justify;
+}
+.input-container {
+	width: 80%;
+	display: flex;
+	gap: 4rem;
+	background-color: white;
+	padding: 2rem;
+	border-radius: 2rem;
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+input {
+	display: block;
+	width: 250px;
+}
+
+/*Queries*/
+
+@media (max-width: 768px) {
+	.main-container {
+		flex-direction: column;
+	}
+	.hero-image {
+		width: 100vw;
+	}
 }
