@@ -93,7 +93,7 @@ h2 {
 	display: flex;
 	gap: 4rem;
 }
-.form p {
+.form > p {
 	padding: 0 2rem;
 	font-weight: 600;
 	color: var(--text-color3);
@@ -104,6 +104,16 @@ input {
 	width: 300px;
 	margin-top: 5px;
 	font-size: 0.8rem;
+	border-radius: 5px;
+	border: 0px;
+	outline: 1px solid gray;
+	transition: 0.1s;
+	height: 1.7rem;
+}
+
+input:hover {
+	border: 0;
+	outline: 2.5px solid var(--text-color2);
 }
 
 .input label {
@@ -118,6 +128,12 @@ input {
 	justify-content: space-around;
 }
 
+input:invalid:not(:placeholder-shown) {
+	outline: 2.5px solid red;
+}
+input:valid:not(:placeholder-shown) {
+	outline: 2.5px solid var(--text-color2);
+}
 button {
 	margin-top: 2rem;
 	padding: 8px;
@@ -130,6 +146,10 @@ button {
 }
 button:hover {
 	background-color: rgb(197, 218, 161);
+}
+
+.form-container p {
+	font-size: 0.8rem;
 }
 
 /*Queries*/

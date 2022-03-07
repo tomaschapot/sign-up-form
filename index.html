@@ -43,6 +43,7 @@
 									<div class="input">
 										<label for="first-name">First Name</label>
 										<input
+											placeholder=" "
 											required
 											pattern="([a-z A-Z]{2,25})"
 											title="Solo puede tener letras y con un largo entre 2 a 25 caracteres"
@@ -53,11 +54,18 @@
 									</div>
 									<div class="input">
 										<label for="email">Email</label>
-										<input required type="email" name="email" id="email" />
+										<input
+											placeholder=" "
+											required
+											type="email"
+											name="email"
+											id="email"
+										/>
 									</div>
 									<div class="input">
 										<label for="password">Password</label>
 										<input
+											placeholder=" "
 											pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
 											title="Tiene que tener un UpperCase, a Lower Case and a Number"
 											required
@@ -71,6 +79,7 @@
 									<div class="input">
 										<label for="last-name">Last Name</label>
 										<input
+											placeholder=" "
 											required
 											pattern="([a-z A-Z]{2,25})"
 											title="Solo puede tener letras y con un largo entre 2 a 25 caracteres"
@@ -81,11 +90,21 @@
 									</div>
 									<div class="input">
 										<label for="phone">Phone Number</label>
-										<input type="tel" name="phone" id="phone" />
+										<input
+											placeholder=" "
+											pattern="[0-9]{10}"
+											title="Ese no es un telefono valido"
+											type="tel"
+											name="phone"
+											id="phone"
+										/>
 									</div>
 									<div class="input">
 										<label for="confirm-password">Confirm Password</label>
 										<input
+											placeholder=" "
+											pattern="([a-z A-Z]{2,25})"
+											title="Solo puede tener letras y con un largo entre 2 a 25 caracteres"
 											required
 											type="password"
 											name="confirm-password"
@@ -95,6 +114,7 @@
 								</div>
 							</div>
 							<button type="submit">Create Account!</button>
+							<p>Already Have an Account? <a href="">Log In</a></p>
 						</div>
 					</form>
 				</div>
