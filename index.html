@@ -33,46 +33,71 @@
 						this in your life to help you realize your deepest dreams.<br />
 						Sign Up now to get started.
 					</p>
-					<p></p>
+
 					<p>You know you want to.</p>
 					<form action="">
-						<h2>Let's Do This!</h2>
-						<div class="input-container">
-							<div class="row">
-								<div class="input">
-									<label for="first-name">First Name</label>
-									<input type="text" name="first_name" id="first-name" />
+						<div class="form-container">
+							<h2>Let's Do This!</h2>
+							<div class="input-container">
+								<div class="row">
+									<div class="input">
+										<label for="first-name">First Name</label>
+										<input
+											required
+											pattern="([a-z A-Z]{2,25})"
+											title="Solo puede tener letras y con un largo entre 2 a 25 caracteres"
+											type="text"
+											name="first_name"
+											id="first-name"
+										/>
+									</div>
+									<div class="input">
+										<label for="email">Email</label>
+										<input required type="email" name="email" id="email" />
+									</div>
+									<div class="input">
+										<label for="password">Password</label>
+										<input
+											pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+											title="Tiene que tener un UpperCase, a Lower Case and a Number"
+											required
+											type="password"
+											name="password"
+											id="password"
+										/>
+									</div>
 								</div>
-								<div class="input">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email" />
-								</div>
-								<div class="input">
-									<label for="password">Password</label>
-									<input type="password" name="password" id="password" />
+								<div class="row">
+									<div class="input">
+										<label for="last-name">Last Name</label>
+										<input
+											required
+											pattern="([a-z A-Z]{2,25})"
+											title="Solo puede tener letras y con un largo entre 2 a 25 caracteres"
+											type="text"
+											name="last_name"
+											id="last-name"
+										/>
+									</div>
+									<div class="input">
+										<label for="phone">Phone Number</label>
+										<input type="tel" name="phone" id="phone" />
+									</div>
+									<div class="input">
+										<label for="confirm-password">Confirm Password</label>
+										<input
+											required
+											type="password"
+											name="confirm-password"
+											id="confirm-password"
+										/>
+									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="input">
-									<label for="last-name">Last Name</label>
-									<input type="text" name="last_name" id="last-name" />
-								</div>
-								<div class="input">
-									<label for="phone-number">Phone Number</label>
-									<input type="tel" name="phone" id="phone" />
-								</div>
-								<div class="input">
-									<label for="confirm-password">Confirm Password</label>
-									<input
-										type="password"
-										name="confirm-password"
-										id="confirm-password"
-									/>
-								</div>
-							</div>
+							<button type="submit">Create Account!</button>
 						</div>
 					</form>
-				
+				</div>
 			</div>
 		</main>
 	</body>
